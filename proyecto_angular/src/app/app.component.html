@@ -1,22 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="container">
+  <h1>Variables</h1>
+  <h2>Nombre: {{nombre}}</h2>
+  <h3>Edad: {{edad}} años</h3>
+  <h3>Altura: {{altura}}cm</h3>
+  <h3>Puesto: {{puesto}}</h3>
+  <h3>Adulto: {{esAdulto()}}</h3>
+</div>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+<!-- ngIf -->
+<div class="container">
+  <h1>Directiva `*ngIf`</h1>
+  <h4 *ngIf="edad>=18">Es mayor de edad</h4>
+  <h4 *ngIf="edad<18">Es menor de edad</h4>
+</div>
 
-<body>
+<!-- ngFor -->
+<div class="container">
+  <h1>Directiva `*ngFor`</h1>
+  <ul>
+    <li *ngFor="let sueldo of sueldos">{{sueldo}}</li>
+  </ul>
 
-  <div class="container">
-    <h2>Nombre: {{nombre}}</h2>
-    <h3>Edad: {{edad}} años</h3>
-    <h3>Altura: {{altura}}cm</h3>
-    <h3>Puesto: {{puesto}}</h3>
-    <h3>Adulto: {{esAdulto()}}</h3>
-  </div>
+  <select name="" id="">
+    <option *ngFor='let provincia of provincias' value="{{provincia.id}}">
+      {{provincia.nombre}}
+    </option>
+  </select>
 
-</body>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+    </tr>
 
-</html>
+    <tr *ngFor="let provincia of provincias">
+      <td>{{provincia.id}}</td>
+      <td>{{provincia.nombre}}</td>
+    </tr>
+  </table>
+</div>
+
+<!-- eventos(click) -->
+<!--  -->
+<div class="container">
+  <h1>Captura de eventos</h1>
+  <button (click)="diHola()">Di Hola</button><br><br>
+  <p>{{valor}}</p><br>
+  <button (click)="decrementar()">Descrementar</button><br>
+  <button (click)="incrementar()">Incrementar</button>
+</div>
+
+<!-- model -->
+<div class="container">
+  <h1>Directiva ngModel</h1>
+  <input type="text" [(ngModel)]="nombre" name="" id="">
+</div>
