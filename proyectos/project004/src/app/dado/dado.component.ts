@@ -10,6 +10,8 @@ export class DadoComponent {
 
   @Input() valor: number = 1;
 
-  
+  constructor() {
+    this.valor;
+  }
 
 }
