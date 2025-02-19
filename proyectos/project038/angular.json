@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "project005": {
+    "project038": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/project005",
+            "outputPath": "dist/project038",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "project005:build:production"
+              "buildTarget": "project038:build:production"
             },
             "development": {
-              "buildTarget": "project005:build:development"
+              "buildTarget": "project038:build:development"
             }
           },
           "defaultConfiguration": "development"
