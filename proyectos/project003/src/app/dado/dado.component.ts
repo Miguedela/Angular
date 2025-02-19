@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class DadoComponent {
 
+  valor!: number;
+
+  constructor() {
+    this.valor = this.generarAleatorio();
+  }
+
+  generarAleatorio() {
+    return Math.floor(Math.random() * 6) + 1;
+  }
+
 }
