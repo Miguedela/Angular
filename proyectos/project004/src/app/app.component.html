@@ -1,8 +1,10 @@
 <div>
-  <app-dado [valor]="valor1"></app-dado>
-  <app-dado [valor]="valor2"></app-dado>
-  <app-dado [valor]="valor3"></app-dado>
+  <div class="row">
+    <app-dado class="col-1" [valor]="valor1"></app-dado>
+    <app-dado class="col-1" [valor]="valor2"></app-dado>
+    <app-dado class="col-1" [valor]="valor3"></app-dado>
+  </div>
   <p>{{resultado}}</p>
   <hr>
-  <button (click)="lanzarDados()">Lanzar</button>
+  <button class="btn btn-dark" (click)="lanzarDados()">Lanzar</button>
 </div>
